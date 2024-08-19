@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using WebApplication13.Models;
 
 namespace WebApplication13.Controllers
@@ -18,14 +19,13 @@ namespace WebApplication13.Controllers
         [HttpGet]
         public IActionResult GetPro()
         {
-            var pro = _Db.Products.ToList();
+            var pro = _Db.Products.Include(p=> p.Category).ToList();
             return Ok(pro);
         }
         [HttpGet("{id}")]
         public IActionResult GetProByID(int id)
         {
-            var pro = _Db.Categories.Where(p => p.Id == id).FirstOrDefault();
-
+            var pro = _Db.Products.Include(p => p.Category).FirstOrDefault(p => p.Id == id);
             return Ok(pro);
         }
     }

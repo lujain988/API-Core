@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Text.Json.Serialization;
 
 namespace WebApplication13.Models;
 
@@ -16,6 +17,6 @@ public partial class Product
     public int? CategoryId { get; set; }
 
     public string? ProductImage { get; set; }
-
+    [JsonIgnore]
     public virtual Category? Category { get; set; }
 }
