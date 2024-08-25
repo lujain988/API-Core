@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using WebApplication13.Models;
 
 namespace WebApplication13.Controllers
@@ -58,36 +59,63 @@ namespace WebApplication13.Controllers
 
             return Ok(order);
         }
-        [HttpGet("Name/{name}")]
+        [HttpGet("{name}")]
         public IActionResult GetORByID(string name)
         {
             var orders = _Db.Orders
-           .Join(_Db.Products,
-                 order => order.ProductId,
-                 product => product.Id,
-                 (order, product) => new { order, product })
-           .Join(_Db.Users,
-                 op => op.order.UserId,
-                 user => user.Id,
-                 (op, user) => new
-                 {
-                     OrderId = op.order.Id,
-                     UserId = op.order.UserId,
-                     OrderDate = op.order.OrderDate,
-                     ProductId = op.order.ProductId,
-                     Quantity = op.order.Quantity,
-                     ProductName = op.product.ProductName,
-                     UserName = user.Username
-                 })
-           .Where(o => o.ProductName == name)
-           .ToList();
+                .Include(o => o.Product)
+                .Include(o => o.User)
+                .Where(o => o.Product.ProductName == name)
+                .Select(o => new
+                {
+                    OrderId = o.Id,
+                    UserId = o.UserId,
+                    OrderDate = o.OrderDate,
+                    ProductId = o.ProductId,
+                    Quantity = o.Quantity,
+                    ProductName = o.Product.ProductName,
+                    UserName = o.User.Username
+                })
+                .ToList();
 
-            if (orders == null )
+            if (!orders.Any())
             {
                 return NotFound("No orders found for the specified product.");
             }
+
             return Ok(orders);
         }
+
+        //[HttpGet("Name/{name}")]
+        //public IActionResult GetORByID(string name)
+        //{
+        //    var orders = _Db.Orders
+        //   .Join(_Db.Products,
+        //         order => order.ProductId,
+        //         product => product.Id,
+        //         (order, product) => new { order, product })
+        //   .Join(_Db.Users,
+        //         op => op.order.UserId,
+        //         user => user.Id,
+        //         (op, user) => new
+        //         {
+        //             OrderId = op.order.Id,
+        //             UserId = op.order.UserId,
+        //             OrderDate = op.order.OrderDate,
+        //             ProductId = op.order.ProductId,
+        //             Quantity = op.order.Quantity,
+        //             ProductName = op.product.ProductName,
+        //             UserName = user.Username
+        //         })
+        //   .Where(o => o.ProductName == name)
+        //   .ToList();
+
+        //    if (orders == null )
+        //    {
+        //        return NotFound("No orders found for the specified product.");
+        //    }
+        //    return Ok(orders);
+        //}
         [HttpDelete]
 
         public IActionResult DeleteOR(int id)

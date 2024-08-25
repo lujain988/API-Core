@@ -15,10 +15,10 @@ namespace WebApplication13.Controllers
             _Db = db;
         }
 
-        [HttpGet("All")]
+        [HttpGet]
         public IActionResult GetPro()
         {
-            var pro = _Db.Products.Include(p => p.Category).ToList();
+            var pro = _Db.Products.ToList();
             if (pro == null )
             {
                 return NoContent(); // 204 No Content if no products are found
@@ -28,21 +28,36 @@ namespace WebApplication13.Controllers
 
         [HttpGet]
         [Route("{id}")]
-        public IActionResult GetProByID(int id, [FromQuery]int id2)
+        public IActionResult GetProByID(int id)
         {
             if (id <= 0)
             {
                 return BadRequest("Invalid product ID."); // 400 Bad Request for invalid ID
             }
 
-            var pro = _Db.Products.Include(p => p.Category).FirstOrDefault(p => p.Id == id && id2==2);
+            var pro = _Db.Products.Where(p => p.CategoryId == id ).ToList();
             if (pro == null)
             {
                 return NotFound(); // 404 Not Found if product does not exist
             }
             return Ok(pro); // 200 OK with product data
         }
+        [HttpGet]
+        [Route("Product/{id}")]
+        public IActionResult GetProID(int id)
+        {
+            if (id <= 0)
+            {
+                return BadRequest("Invalid product ID."); // 400 Bad Request for invalid ID
+            }
 
+            var pro = _Db.Products.Where(p => p.Id == id).FirstOrDefault();
+            if (pro == null)
+            {
+                return NotFound(); // 404 Not Found if product does not exist
+            }
+            return Ok(pro); // 200 OK with product data
+        }
         // GET: api/products/name/{name}
         [HttpGet("Name/{name:max(10)}")]
         public IActionResult GetProByName(string name)
