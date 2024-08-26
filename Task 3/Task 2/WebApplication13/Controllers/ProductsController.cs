@@ -14,7 +14,16 @@ namespace WebApplication13.Controllers
         {
             _Db = db;
         }
-
+        [HttpGet("Price/")]
+        public IActionResult GetPrice() {
+            var price = _Db.Products.OrderByDescending(p => p.Price).ToList();
+            if (price == null)
+            {
+                return NoContent(); // 204 No Content if no products are found
+            }
+            return Ok();
+        
+        }
         [HttpGet]
         public IActionResult GetPro()
         {
@@ -27,7 +36,7 @@ namespace WebApplication13.Controllers
         }
 
         [HttpGet]
-        [Route("{id}")]
+        [Route("{id:int}")]
         public IActionResult GetProByID(int id)
         {
             if (id <= 0)

@@ -24,31 +24,36 @@ CREATE TABLE Orders (
     UserID int REFERENCES Users(ID),
     OrderDate date
 );
+truncate  table Categories
+truncate  table Products
+truncate table Orders
+truncate table Users
+
 
 INSERT INTO Categories (CategoryName, CategoryImage)
 VALUES 
-('Electronics', 'electronics.jpg'),
-('Books', 'books.jpg'),
-('Clothing', 'clothing.jpg'),
-('Home Appliances', 'home_appliances.jpg'),
-('Sports', 'sports.jpg'),
-('Toys', 'toys.jpg'),
-('Furniture', 'furniture.jpg'),
-('Beauty Products', 'beauty_products.jpg'),
-('Automobiles', 'automobiles.jpg'),
-('Groceries', 'groceries.jpg');
+('Electronics', 'https://plus.unsplash.com/premium_photo-1667689956673-8737a299aa8c?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8c2t5fGVufDB8fDB8fHww'),
+('Books', 'https://plus.unsplash.com/premium_photo-1667689956673-8737a299aa8c?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8c2t5fGVufDB8fDB8fHww'),
+('Clothing', 'https://plus.unsplash.com/premium_photo-1667689956673-8737a299aa8c?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8c2t5fGVufDB8fDB8fHww'),
+('Home Appliances', 'https://plus.unsplash.com/premium_photo-1667689956673-8737a299aa8c?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8c2t5fGVufDB8fDB8fHww'),
+('Sports', 'https://plus.unsplash.com/premium_photo-1667689956673-8737a299aa8c?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8c2t5fGVufDB8fDB8fHww'),
+('Toys', 'https://plus.unsplash.com/premium_photo-1667689956673-8737a299aa8c?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8c2t5fGVufDB8fDB8fHww'),
+('Furniture', 'https://plus.unsplash.com/premium_photo-1667689956673-8737a299aa8c?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8c2t5fGVufDB8fDB8fHww'),
+('Beauty Products', 'https://plus.unsplash.com/premium_photo-1667689956673-8737a299aa8c?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8c2t5fGVufDB8fDB8fHww'),
+('Automobiles', 'https://plus.unsplash.com/premium_photo-1667689956673-8737a299aa8c?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8c2t5fGVufDB8fDB8fHww'),
+('Groceries', 'https://plus.unsplash.com/premium_photo-1667689956673-8737a299aa8c?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8c2t5fGVufDB8fDB8fHww');
 INSERT INTO Products (ProductName, [Description], Price, CategoryID, ProductImage)
 VALUES 
-('Smartphone', 'A high-end smartphone with great features.', 69999, 1, 'smartphone.jpg'),
-('Laptop', 'A powerful laptop for work and gaming.', 119999, 1, 'laptop.jpg'),
-('Novel', 'A best-selling fiction novel.', 999, 2, 'novel.jpg'),
-('Textbook', 'An essential textbook for students.', 1999, 2, 'textbook.jpg'),
-('T-shirt', 'A comfortable cotton t-shirt.', 499, 3, 'tshirt.jpg'),
-('Jeans', 'Stylish denim jeans.', 1499, 3, 'jeans.jpg'),
-('Microwave', 'A high-efficiency microwave oven.', 7999, 4, 'microwave.jpg'),
-('Refrigerator', 'A large double-door refrigerator.', 24999, 4, 'refrigerator.jpg'),
-('Football', 'A standard size football for sports.', 699, 5, 'football.jpg'),
-('Cricket Bat', 'A professional cricket bat.', 1599, 5, 'cricket_bat.jpg');
+('Smartphone', 'A high-end smartphone with great features.', 69999, 1, 'https://plus.unsplash.com/premium_photo-1667689956673-8737a299aa8c?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8c2t5fGVufDB8fDB8fHww'),
+('Laptop', 'A powerful laptop for work and gaming.', 119999, 1, 'https://plus.unsplash.com/premium_photo-1667689956673-8737a299aa8c?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8c2t5fGVufDB8fDB8fHwwg'),
+('Novel', 'A best-selling fiction novel.', 999, 2, 'https://plus.unsplash.com/premium_photo-1667689956673-8737a299aa8c?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8c2t5fGVufDB8fDB8fHww'),
+('Textbook', 'An essential textbook for students.', 1999, 2, 'https://plus.unsplash.com/premium_photo-1667689956673-8737a299aa8c?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8c2t5fGVufDB8fDB8fHww'),
+('T-shirt', 'A comfortable cotton t-shirt.', 499, 3, 'https://plus.unsplash.com/premium_photo-1667689956673-8737a299aa8c?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8c2t5fGVufDB8fDB8fHww'),
+('Jeans', 'Stylish denim jeans.', 1499, 3, 'https://plus.unsplash.com/premium_photo-1667689956673-8737a299aa8c?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8c2t5fGVufDB8fDB8fHww'),
+('Microwave', 'A high-efficiency microwave oven.', 7999, 4, 'https://plus.unsplash.com/premium_photo-1667689956673-8737a299aa8c?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8c2t5fGVufDB8fDB8fHww'),
+('Refrigerator', 'A large double-door refrigerator.', 24999, 4, 'https://plus.unsplash.com/premium_photo-1667689956673-8737a299aa8c?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8c2t5fGVufDB8fDB8fHww'),
+('Football', 'A standard size football for sports.', 699, 5, 'https://plus.unsplash.com/premium_photo-1667689956673-8737a299aa8c?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8c2t5fGVufDB8fDB8fHww'),
+('Cricket Bat', 'A professional cricket bat.', 1599, 5, 'https://plus.unsplash.com/premium_photo-1667689956673-8737a299aa8c?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8c2t5fGVufDB8fDB8fHww');
 
 -- Insert data into the Users table
 INSERT INTO Users (Username, [Password], Email)
