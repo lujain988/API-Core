@@ -22,6 +22,8 @@ async function getAllProduct() {
             <p class="card-text">${product.price}</p>
         </div>
       <button class="btn btn-primary" onclick="saveToLocalStorage(${product.id})">Details</button>
+      <button class="btn btn-primary" onclick="updateCategory(${product.id})">Update</button>
+
 
       </div>
       </div>`;
@@ -29,9 +31,14 @@ async function getAllProduct() {
 
   console.log(data);
 }
+function updateCategory(id) {
+  localStorage.setItem("categories", id);
+  window.location.href = "updat.html";
+}
 function saveToLocalStorage(id) {
   localStorage.setItem("products", id);
   window.location.href = "details.html";
 
 }
+
 getAllProduct();

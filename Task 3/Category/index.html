@@ -14,6 +14,15 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
+    <style>
+       .card-container {
+      margin: 0; 
+      padding: 0; 
+    }
+    .card {
+      margin-bottom: 15px;
+    }
+    </style>
     <title>Document</title>
   </head>
   <body>
@@ -44,9 +53,19 @@
         </ul>
       </div>
     </nav>
-    <div id="conteainer"></div>
-
-
+      <!-- add a form to add a new category -->
+      <form id="form" >
+        <div class="form-group">
+          <label for="categoryName">Category Name</label>
+          <input type="text" class="form-control" id="categoryName" placeholder="Enter Category Name" />
+        </div>
+        <div class="form-group">
+          <label for="categoryImage">Category Image</label>
+          <input type="file" class="form-control" id="categoryImage" />
+        </div>
+        <button type="submit" class="btn btn-primary" id="submit">Submit</button>
+      </form>
+    <div class="row" id="conteainer"  enctype="multipart/form-data"></div>
     <script src="script.js"></script>
   </body>
 </html>
