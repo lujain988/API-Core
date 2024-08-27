@@ -16,7 +16,9 @@ async function getAllCategory() {
       <td>${category.categoryName}</td>
       <td>${category.id}</td>
       <td>
-      <button class="btn btn-primary" onclick="saveToLocalStorage(${category.id})">Edit</button>
+      <button class="btn btn-outline-primary" onclick="saveToLocalStorage(${category.id})">Edit</button>
+              <button class="btn btn-outline-danger" onclick="deleteProduct(${category.id})">Delete</button>
+
       </td>
     </tr>
 
@@ -36,6 +38,16 @@ async function getAllCategory() {
     localStorage.setItem("categories", id);
     window.location.href = "updat.html";
   }
+  
+async function deleteProduct(id) {
+  var url = `http://localhost:5286/api/Categories/${id}`;
+  
+  let request = await fetch(url, {
+    method: "DELETE",
+  });
+    alert("Product Deleted");
+    window.location.href = "AdminDashboard.html";
+}
   
   getAllCategory();
   function addCategory(id) {

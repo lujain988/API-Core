@@ -22,7 +22,8 @@ async function getAllProduct() {
       <td>${product.id}</td>
       <td>${product.price}</td>
       <td>
-        <button class="btn btn-primary" onclick="saveToLocalStorage(${product.id})">Edit</button>
+        <button class="btn btn-outline-primary" onclick="saveToLocalStorage(${product.id})">Edit</button>
+        <button class="btn btn-outline-danger" onclick="deleteProduct(${product.id})">Delete</button>
       </td>
     </tr>
   `;
@@ -41,6 +42,18 @@ function saveToLocalStorage(id) {
 function saveToLocalStorage(id) {
   localStorage.setItem("products", id);
   window.location.href = "UpdateProduct.html";
+}
+
+
+
+async function deleteProduct(id) {
+  var url = `http://localhost:5286/Products/${id}`;
+  
+  let request = await fetch(url, {
+    method: "DELETE",
+  });
+    alert("Product Deleted");
+    window.location.href = "ShowProduct.html";  
 }
 
 getAllProduct();
