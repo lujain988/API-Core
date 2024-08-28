@@ -26,6 +26,7 @@ function storeProductInCart(id) {
             });
 
             let responseData = await response.json();
+            alert ("Product added to cart");
             window.location.href = 'ShopingCart.html';
 
     }

@@ -50,6 +50,8 @@ async function getAllProduct() {
           });
 
           let responseData = await response.json();
+          alert ("Product added to cart");
+
           window.location.href = 'ShopingCart.html';
 
   }
