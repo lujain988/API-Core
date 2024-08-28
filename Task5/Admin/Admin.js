@@ -7,12 +7,12 @@ async function getAllCategory() {
   
     data.forEach((category) => {
       // Create card with save button
-      let imageUrl = `${category.categoryImage}`; 
+      let imageUrl = `${category.categoryImage }`;
       cards.innerHTML +=`
    
     <tr>
       <th scope="row">:)</th>
-      <td><img src="${imageUrl}" alt="${category.categoryImage} (image not found)" style="width: 50px; height: auto;"></td>
+      <td><img src="${imageUrl}" alt="${category.categoryImage} (image not found)" style="width: 100px; height: auto;"></td>
       <td>${category.categoryName}</td>
       <td>${category.id}</td>
       <td>
