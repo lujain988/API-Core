@@ -1,0 +1,247 @@
+2024-08-29 12:43:14.347 +03:00 [WRN] The WebRootPath was not found: C:\Users\Orange\Desktop\Task 3\Task 2\WebApplication13\wwwroot. Static files may be unavailable.
+2024-08-29 12:43:14.448 +03:00 [INF] Now listening on: http://localhost:5286
+2024-08-29 12:43:14.449 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-08-29 12:43:14.450 +03:00 [INF] Hosting environment: Development
+2024-08-29 12:43:14.451 +03:00 [INF] Content root path: C:\Users\Orange\Desktop\Task 3\Task 2\WebApplication13
+2024-08-29 12:43:14.997 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5286/swagger/index.html - null null
+2024-08-29 12:43:15.244 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5286/swagger/index.html - 200 null text/html;charset=utf-8 256.0798ms
+2024-08-29 12:43:15.255 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5286/_vs/browserLink - null null
+2024-08-29 12:43:15.255 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5286/_framework/aspnetcore-browser-refresh.js - null null
+2024-08-29 12:43:15.260 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5286/_framework/aspnetcore-browser-refresh.js - 200 13768 application/javascript; charset=utf-8 5.1295ms
+2024-08-29 12:43:15.295 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5286/_vs/browserLink - 200 null text/javascript; charset=UTF-8 40.2684ms
+2024-08-29 12:43:15.387 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5286/swagger/v1/swagger.json - null null
+2024-08-29 12:43:16.020 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5286/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 633.3002ms
+2024-08-29 12:43:33.111 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5286/api/cartItem - null null
+2024-08-29 12:43:33.119 +03:00 [INF] Executing endpoint 'WebApplication13.Controllers.cartItemController.getItem (WebApplication13)'
+2024-08-29 12:43:33.134 +03:00 [INF] Route matched with {action = "getItem", controller = "cartItem"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult getItem() on controller WebApplication13.Controllers.cartItemController (WebApplication13).
+2024-08-29 12:43:34.516 +03:00 [INF] Executed DbCommand (64ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[ID] AS [id], [c].[CartID] AS [cartId], [c].[Quantity] AS [quantity], [p].[ID] AS [ProductId], [p].[ProductName], [p].[Price], [p].[Description], [p].[ProductImage]
+FROM [CartItems] AS [c]
+INNER JOIN [Products] AS [p] ON [c].[ProductID] = [p].[ID]
+2024-08-29 12:43:34.560 +03:00 [INF] I am Lujain ,
+2024-08-29 12:43:34.572 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[<>f__AnonymousType0`4[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[<>f__AnonymousType1`5[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.Int64, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], WebApplication13, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], WebApplication13, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-08-29 12:43:34.633 +03:00 [INF] Executed action WebApplication13.Controllers.cartItemController.getItem (WebApplication13) in 1489.5382ms
+2024-08-29 12:43:34.635 +03:00 [INF] Executed endpoint 'WebApplication13.Controllers.cartItemController.getItem (WebApplication13)'
+2024-08-29 12:43:34.649 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5286/api/cartItem - 200 null application/json; charset=utf-8 1538.6611ms
+2024-08-29 12:44:17.169 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5286/math?Expression=1%2A5 - null null
+2024-08-29 12:44:17.172 +03:00 [INF] Executing endpoint 'WebApplication13.Controllers.DoMath.Mathmatics (WebApplication13)'
+2024-08-29 12:44:17.182 +03:00 [INF] Route matched with {action = "Mathmatics", controller = "DoMath"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Mathmatics(WebApplication13.DTOs.Mathmatics) on controller WebApplication13.Controllers.DoMath (WebApplication13).
+2024-08-29 12:44:17.442 +03:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType3`1[[System.Object, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-08-29 12:44:17.452 +03:00 [INF] Executed action WebApplication13.Controllers.DoMath.Mathmatics (WebApplication13) in 267.4172ms
+2024-08-29 12:44:17.453 +03:00 [INF] Executed endpoint 'WebApplication13.Controllers.DoMath.Mathmatics (WebApplication13)'
+2024-08-29 12:44:17.453 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5286/math?Expression=1%2A5 - 200 null application/json; charset=utf-8 286.1457ms
+2024-08-29 12:45:22.291 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5286/api/Categories - null null
+2024-08-29 12:45:22.298 +03:00 [INF] CORS policy execution successful.
+2024-08-29 12:45:22.299 +03:00 [INF] Executing endpoint 'WebApplication13.Controllers.CategoriesController.GetCat (WebApplication13)'
+2024-08-29 12:45:22.301 +03:00 [INF] Route matched with {action = "GetCat", controller = "Categories"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetCat() on controller WebApplication13.Controllers.CategoriesController (WebApplication13).
+2024-08-29 12:45:22.367 +03:00 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[ID], [c].[CategoryImage], [c].[CategoryName]
+FROM [Categories] AS [c]
+2024-08-29 12:45:22.410 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[WebApplication13.Models.Category, WebApplication13, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-08-29 12:45:22.419 +03:00 [INF] Executed action WebApplication13.Controllers.CategoriesController.GetCat (WebApplication13) in 117.256ms
+2024-08-29 12:45:22.420 +03:00 [INF] Executed endpoint 'WebApplication13.Controllers.CategoriesController.GetCat (WebApplication13)'
+2024-08-29 12:45:22.421 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5286/api/Categories - 200 null application/json; charset=utf-8 130.8188ms
+2024-08-29 12:45:25.330 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5286/api/Categories - null null
+2024-08-29 12:45:25.351 +03:00 [INF] CORS policy execution successful.
+2024-08-29 12:45:25.369 +03:00 [INF] Executing endpoint 'WebApplication13.Controllers.CategoriesController.GetCat (WebApplication13)'
+2024-08-29 12:45:25.383 +03:00 [INF] Route matched with {action = "GetCat", controller = "Categories"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetCat() on controller WebApplication13.Controllers.CategoriesController (WebApplication13).
+2024-08-29 12:45:25.398 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[WebApplication13.Models.Category, WebApplication13, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-08-29 12:45:25.406 +03:00 [INF] Executed action WebApplication13.Controllers.CategoriesController.GetCat (WebApplication13) in 11.2074ms
+2024-08-29 12:45:25.416 +03:00 [INF] Executed endpoint 'WebApplication13.Controllers.CategoriesController.GetCat (WebApplication13)'
+2024-08-29 12:45:25.424 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5286/api/Categories - 200 null application/json; charset=utf-8 95.5744ms
+2024-08-29 12:45:25.912 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5286/api/Categories - null null
+2024-08-29 12:45:25.914 +03:00 [INF] CORS policy execution successful.
+2024-08-29 12:45:25.915 +03:00 [INF] Executing endpoint 'WebApplication13.Controllers.CategoriesController.GetCat (WebApplication13)'
+2024-08-29 12:45:25.916 +03:00 [INF] Route matched with {action = "GetCat", controller = "Categories"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetCat() on controller WebApplication13.Controllers.CategoriesController (WebApplication13).
+2024-08-29 12:45:25.917 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[WebApplication13.Models.Category, WebApplication13, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-08-29 12:45:25.919 +03:00 [INF] Executed action WebApplication13.Controllers.CategoriesController.GetCat (WebApplication13) in 1.9467ms
+2024-08-29 12:45:25.920 +03:00 [INF] Executed endpoint 'WebApplication13.Controllers.CategoriesController.GetCat (WebApplication13)'
+2024-08-29 12:45:25.921 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5286/api/Categories - 200 null application/json; charset=utf-8 8.8663ms
+2024-08-29 12:46:59.400 +03:00 [WRN] The WebRootPath was not found: C:\Users\Orange\Desktop\Task 3\Task 2\WebApplication13\wwwroot. Static files may be unavailable.
+2024-08-29 12:46:59.560 +03:00 [INF] Now listening on: http://localhost:5286
+2024-08-29 12:46:59.563 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-08-29 12:46:59.563 +03:00 [INF] Hosting environment: Development
+2024-08-29 12:46:59.564 +03:00 [INF] Content root path: C:\Users\Orange\Desktop\Task 3\Task 2\WebApplication13
+2024-08-29 12:46:59.875 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5286/swagger/index.html - null null
+2024-08-29 12:47:00.151 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5286/swagger/index.html - 200 null text/html;charset=utf-8 283.2111ms
+2024-08-29 12:47:00.167 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5286/_vs/browserLink - null null
+2024-08-29 12:47:00.167 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5286/_framework/aspnetcore-browser-refresh.js - null null
+2024-08-29 12:47:00.172 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5286/_framework/aspnetcore-browser-refresh.js - 200 13768 application/javascript; charset=utf-8 5.5005ms
+2024-08-29 12:47:00.209 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5286/_vs/browserLink - 200 null text/javascript; charset=UTF-8 42.4593ms
+2024-08-29 12:47:00.277 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5286/swagger/v1/swagger.json - null null
+2024-08-29 12:47:00.436 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5286/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 159.3434ms
+2024-08-29 12:47:15.054 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5286/api/cartItem - null null
+2024-08-29 12:47:15.063 +03:00 [INF] CORS policy execution successful.
+2024-08-29 12:47:15.066 +03:00 [INF] Executing endpoint 'WebApplication13.Controllers.cartItemController.getItem (WebApplication13)'
+2024-08-29 12:47:15.084 +03:00 [INF] Route matched with {action = "getItem", controller = "cartItem"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult getItem() on controller WebApplication13.Controllers.cartItemController (WebApplication13).
+2024-08-29 12:47:16.222 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5286/Products - null null
+2024-08-29 12:47:16.227 +03:00 [INF] CORS policy execution successful.
+2024-08-29 12:47:16.228 +03:00 [INF] Executing endpoint 'WebApplication13.Controllers.ProductsController.GetPro (WebApplication13)'
+2024-08-29 12:47:16.231 +03:00 [INF] Route matched with {action = "GetPro", controller = "Products"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetPro() on controller WebApplication13.Controllers.ProductsController (WebApplication13).
+2024-08-29 12:47:16.436 +03:00 [INF] Executed DbCommand (19ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[ID] AS [id], [c].[CartID] AS [cartId], [c].[Quantity] AS [quantity], [p].[ID] AS [ProductId], [p].[ProductName], [p].[Price], [p].[Description], [p].[ProductImage]
+FROM [CartItems] AS [c]
+INNER JOIN [Products] AS [p] ON [c].[ProductID] = [p].[ID]
+2024-08-29 12:47:16.436 +03:00 [INF] Executed DbCommand (19ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[ID], [p].[CategoryID], [p].[Description], [p].[Price], [p].[ProductImage], [p].[ProductName]
+FROM [Products] AS [p]
+2024-08-29 12:47:16.468 +03:00 [INF] I am Lujain ,
+2024-08-29 12:47:16.474 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[<>f__AnonymousType0`4[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[<>f__AnonymousType1`5[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.Int64, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], WebApplication13, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], WebApplication13, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-08-29 12:47:16.514 +03:00 [INF] Executed action WebApplication13.Controllers.cartItemController.getItem (WebApplication13) in 1424.5892ms
+2024-08-29 12:47:16.515 +03:00 [INF] Executed endpoint 'WebApplication13.Controllers.cartItemController.getItem (WebApplication13)'
+2024-08-29 12:47:16.517 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[WebApplication13.Models.Product, WebApplication13, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-08-29 12:47:16.524 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5286/api/cartItem - 499 null application/json; charset=utf-8 1470.4755ms
+2024-08-29 12:47:16.529 +03:00 [INF] Executed action WebApplication13.Controllers.ProductsController.GetPro (WebApplication13) in 297.0757ms
+2024-08-29 12:47:16.530 +03:00 [INF] Executed endpoint 'WebApplication13.Controllers.ProductsController.GetPro (WebApplication13)'
+2024-08-29 12:47:16.531 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5286/Products - 200 null application/json; charset=utf-8 308.79ms
+2024-08-29 12:47:18.430 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5286/Products/Product/7 - null null
+2024-08-29 12:47:18.432 +03:00 [INF] CORS policy execution successful.
+2024-08-29 12:47:18.433 +03:00 [INF] Executing endpoint 'WebApplication13.Controllers.ProductsController.GetProID (WebApplication13)'
+2024-08-29 12:47:18.439 +03:00 [INF] Route matched with {action = "GetProID", controller = "Products"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetProID(Int32) on controller WebApplication13.Controllers.ProductsController (WebApplication13).
+2024-08-29 12:47:18.592 +03:00 [INF] Executed DbCommand (24ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [p].[ID], [p].[CategoryID], [p].[Description], [p].[Price], [p].[ProductImage], [p].[ProductName]
+FROM [Products] AS [p]
+WHERE [p].[ID] = @__id_0
+2024-08-29 12:47:18.596 +03:00 [INF] Executing OkObjectResult, writing value of type 'WebApplication13.Models.Product'.
+2024-08-29 12:47:18.598 +03:00 [INF] Executed action WebApplication13.Controllers.ProductsController.GetProID (WebApplication13) in 158.196ms
+2024-08-29 12:47:18.599 +03:00 [INF] Executed endpoint 'WebApplication13.Controllers.ProductsController.GetProID (WebApplication13)'
+2024-08-29 12:47:18.600 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5286/Products/Product/7 - 200 null application/json; charset=utf-8 169.7691ms
+2024-08-29 12:47:22.322 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5286/api/cartItem - null null
+2024-08-29 12:47:22.325 +03:00 [INF] CORS policy execution successful.
+2024-08-29 12:47:22.326 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5286/api/cartItem - 204 null null 5.0139ms
+2024-08-29 12:47:22.328 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5286/api/cartItem - application/json 44
+2024-08-29 12:47:22.329 +03:00 [INF] CORS policy execution successful.
+2024-08-29 12:47:22.330 +03:00 [INF] Executing endpoint 'WebApplication13.Controllers.cartItemController.PostItem (WebApplication13)'
+2024-08-29 12:47:22.332 +03:00 [INF] Route matched with {action = "PostItem", controller = "cartItem"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult PostItem(WebApplication13.DTOs.cartitemRequestDTO) on controller WebApplication13.Controllers.cartItemController (WebApplication13).
+2024-08-29 12:47:22.483 +03:00 [INF] Executed DbCommand (7ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (DbType = Int32), @p2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [CartItems] ([CartID], [ProductID], [Quantity])
+OUTPUT INSERTED.[ID]
+VALUES (@p0, @p1, @p2);
+2024-08-29 12:47:22.528 +03:00 [ERR] An exception occurred in the database while saving changes for context type 'WebApplication13.Models.MyDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Violation of UNIQUE KEY constraint 'UQ__CartItem__9AFC1BF843D91F4A'. Cannot insert duplicate key in object 'dbo.CartItems'. The duplicate key value is (3, 7).
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.Read()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDataReader.Read()
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSet(Int32 startCommandIndex, RelationalDataReader reader)
+ClientConnectionId:2edb1d53-d372-4293-a914-320b7594eea5
+Error Number:2627,State:1,Class:14
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSet(Int32 startCommandIndex, RelationalDataReader reader)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.Consume(RelationalDataReader reader)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.Execute(IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.Execute(IEnumerable`1 commandBatches, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChanges(IList`1 entries)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(IList`1 entriesToSave)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(StateManager stateManager, Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.<>c.<SaveChanges>b__112_0(DbContext _, ValueTuple`2 t)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges(Boolean acceptAllChangesOnSuccess)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Violation of UNIQUE KEY constraint 'UQ__CartItem__9AFC1BF843D91F4A'. Cannot insert duplicate key in object 'dbo.CartItems'. The duplicate key value is (3, 7).
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.Read()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDataReader.Read()
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSet(Int32 startCommandIndex, RelationalDataReader reader)
+ClientConnectionId:2edb1d53-d372-4293-a914-320b7594eea5
+Error Number:2627,State:1,Class:14
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSet(Int32 startCommandIndex, RelationalDataReader reader)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.Consume(RelationalDataReader reader)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.Execute(IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.Execute(IEnumerable`1 commandBatches, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChanges(IList`1 entries)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(IList`1 entriesToSave)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(StateManager stateManager, Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.<>c.<SaveChanges>b__112_0(DbContext _, ValueTuple`2 t)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges(Boolean acceptAllChangesOnSuccess)
+2024-08-29 12:47:31.337 +03:00 [WRN] The WebRootPath was not found: C:\Users\Orange\Desktop\Task 3\Task 2\WebApplication13\wwwroot. Static files may be unavailable.
+2024-08-29 12:47:31.434 +03:00 [INF] Now listening on: http://localhost:5286
+2024-08-29 12:47:31.439 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-08-29 12:47:31.440 +03:00 [INF] Hosting environment: Development
+2024-08-29 12:47:31.441 +03:00 [INF] Content root path: C:\Users\Orange\Desktop\Task 3\Task 2\WebApplication13
+2024-08-29 12:47:31.739 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5286/swagger/index.html - null null
+2024-08-29 12:47:31.967 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5286/swagger/index.html - 200 null text/html;charset=utf-8 234.0134ms
+2024-08-29 12:47:31.978 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5286/_vs/browserLink - null null
+2024-08-29 12:47:31.978 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5286/_framework/aspnetcore-browser-refresh.js - null null
+2024-08-29 12:47:31.982 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5286/_framework/aspnetcore-browser-refresh.js - 200 13768 application/javascript; charset=utf-8 3.5012ms
+2024-08-29 12:47:32.009 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5286/_vs/browserLink - 200 null text/javascript; charset=UTF-8 30.9845ms
+2024-08-29 12:47:32.056 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5286/swagger/v1/swagger.json - null null
+2024-08-29 12:47:32.159 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5286/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 103.9388ms
+2024-08-29 12:47:37.411 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5286/api/cartItem - null null
+2024-08-29 12:47:37.421 +03:00 [INF] CORS policy execution successful.
+2024-08-29 12:47:37.424 +03:00 [INF] Executing endpoint 'WebApplication13.Controllers.cartItemController.getItem (WebApplication13)'
+2024-08-29 12:47:37.435 +03:00 [INF] Route matched with {action = "getItem", controller = "cartItem"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult getItem() on controller WebApplication13.Controllers.cartItemController (WebApplication13).
+2024-08-29 12:47:38.739 +03:00 [INF] Executed DbCommand (19ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[ID] AS [id], [c].[CartID] AS [cartId], [c].[Quantity] AS [quantity], [p].[ID] AS [ProductId], [p].[ProductName], [p].[Price], [p].[Description], [p].[ProductImage]
+FROM [CartItems] AS [c]
+INNER JOIN [Products] AS [p] ON [c].[ProductID] = [p].[ID]
+2024-08-29 12:47:38.756 +03:00 [INF] I am Lujain ,
+2024-08-29 12:47:38.761 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[<>f__AnonymousType0`4[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[<>f__AnonymousType1`5[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.Int64, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], WebApplication13, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], WebApplication13, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-08-29 12:47:38.793 +03:00 [INF] Executed action WebApplication13.Controllers.cartItemController.getItem (WebApplication13) in 1354.0895ms
+2024-08-29 12:47:38.794 +03:00 [INF] Executed endpoint 'WebApplication13.Controllers.cartItemController.getItem (WebApplication13)'
+2024-08-29 12:47:38.804 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5286/api/cartItem - 200 null application/json; charset=utf-8 1392.1148ms
+2024-08-29 12:47:39.258 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5286/api/cartItem - null null
+2024-08-29 12:47:39.264 +03:00 [INF] CORS policy execution successful.
+2024-08-29 12:47:39.265 +03:00 [INF] Executing endpoint 'WebApplication13.Controllers.cartItemController.getItem (WebApplication13)'
+2024-08-29 12:47:39.266 +03:00 [INF] Route matched with {action = "getItem", controller = "cartItem"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult getItem() on controller WebApplication13.Controllers.cartItemController (WebApplication13).
+2024-08-29 12:47:39.291 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[ID] AS [id], [c].[CartID] AS [cartId], [c].[Quantity] AS [quantity], [p].[ID] AS [ProductId], [p].[ProductName], [p].[Price], [p].[Description], [p].[ProductImage]
+FROM [CartItems] AS [c]
+INNER JOIN [Products] AS [p] ON [c].[ProductID] = [p].[ID]
+2024-08-29 12:47:39.292 +03:00 [INF] I am Lujain ,
+2024-08-29 12:47:39.293 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[<>f__AnonymousType0`4[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[<>f__AnonymousType1`5[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.Int64, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], WebApplication13, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], WebApplication13, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-08-29 12:47:39.294 +03:00 [INF] Executed action WebApplication13.Controllers.cartItemController.getItem (WebApplication13) in 25.9126ms
+2024-08-29 12:47:39.295 +03:00 [INF] Executed endpoint 'WebApplication13.Controllers.cartItemController.getItem (WebApplication13)'
+2024-08-29 12:47:39.296 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5286/api/cartItem - 200 null application/json; charset=utf-8 37.3384ms
+2024-08-29 12:50:37.303 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5286/api/cartItem/57 - null null
+2024-08-29 12:50:37.305 +03:00 [INF] CORS policy execution successful.
+2024-08-29 12:50:37.306 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5286/api/cartItem/57 - 204 null null 3.0884ms
+2024-08-29 12:50:37.316 +03:00 [INF] Request starting HTTP/1.1 DELETE http://localhost:5286/api/cartItem/57 - null null
+2024-08-29 12:50:37.317 +03:00 [INF] CORS policy execution successful.
+2024-08-29 12:50:37.317 +03:00 [INF] Executing endpoint 'WebApplication13.Controllers.cartItemController.DeleteCartItem (WebApplication13)'
+2024-08-29 12:50:37.324 +03:00 [INF] Route matched with {action = "DeleteCartItem", controller = "cartItem"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult DeleteCartItem(Int32) on controller WebApplication13.Controllers.cartItemController (WebApplication13).
+2024-08-29 12:50:37.453 +03:00 [INF] Executed DbCommand (21ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[ID], [c].[CartID], [c].[ProductID], [c].[Quantity]
+FROM [CartItems] AS [c]
+WHERE [c].[ID] = @__id_0
+2024-08-29 12:50:37.597 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@p0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+DELETE FROM [CartItems]
+OUTPUT 1
+WHERE [ID] = @p0;
+2024-08-29 12:50:37.607 +03:00 [INF] Executing OkObjectResult, writing value of type 'WebApplication13.Models.CartItem'.
+2024-08-29 12:50:37.621 +03:00 [INF] Executed action WebApplication13.Controllers.cartItemController.DeleteCartItem (WebApplication13) in 295.7912ms
+2024-08-29 12:50:37.622 +03:00 [INF] Executed endpoint 'WebApplication13.Controllers.cartItemController.DeleteCartItem (WebApplication13)'
+2024-08-29 12:50:37.624 +03:00 [INF] Request finished HTTP/1.1 DELETE http://localhost:5286/api/cartItem/57 - 200 null application/json; charset=utf-8 308.2824ms
+2024-08-29 12:50:38.841 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5286/api/cartItem - null null
+2024-08-29 12:50:38.843 +03:00 [INF] CORS policy execution successful.
+2024-08-29 12:50:38.843 +03:00 [INF] Executing endpoint 'WebApplication13.Controllers.cartItemController.getItem (WebApplication13)'
+2024-08-29 12:50:38.844 +03:00 [INF] Route matched with {action = "getItem", controller = "cartItem"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult getItem() on controller WebApplication13.Controllers.cartItemController (WebApplication13).
+2024-08-29 12:50:38.848 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[ID] AS [id], [c].[CartID] AS [cartId], [c].[Quantity] AS [quantity], [p].[ID] AS [ProductId], [p].[ProductName], [p].[Price], [p].[Description], [p].[ProductImage]
+FROM [CartItems] AS [c]
+INNER JOIN [Products] AS [p] ON [c].[ProductID] = [p].[ID]
+2024-08-29 12:50:38.849 +03:00 [INF] I am Lujain ,
+2024-08-29 12:50:38.850 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[<>f__AnonymousType0`4[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[<>f__AnonymousType1`5[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Nullable`1[[System.Int64, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], WebApplication13, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], WebApplication13, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-08-29 12:50:38.853 +03:00 [INF] Executed action WebApplication13.Controllers.cartItemController.getItem (WebApplication13) in 7.9402ms
+2024-08-29 12:50:38.853 +03:00 [INF] Executed endpoint 'WebApplication13.Controllers.cartItemController.getItem (WebApplication13)'
+2024-08-29 12:50:38.854 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5286/api/cartItem - 200 null application/json; charset=utf-8 13.4653ms
