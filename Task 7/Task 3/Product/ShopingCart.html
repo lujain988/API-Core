@@ -14,23 +14,31 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
     <style>
       .card-container {
         margin: 20px;
       }
       @media (min-width: 1025px) {
-.h-custom {
-height: 100vh !important;
-}
-}
-.card {
-    border: 1px solid #ddd;
-    border-radius: 0.5rem;
-    box-shadow: 0 0 1rem rgba(0,0,0,0.1);
-  }
-  .card-body {
-    padding: 1rem;
-  }
+        .h-custom {
+          height: 100vh !important;
+        }
+      }
+      .card {
+        border: 1px solid #ddd;
+        border-radius: 0.5rem;
+        box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+      }
+      .card-body {
+        padding: 1rem;
+      }
     </style>
     <title>Document</title>
   </head>
@@ -65,48 +73,51 @@ height: 100vh !important;
         </ul>
       </div>
     </nav>
-    <section class="h-100 h-custom" style="background-color: #eee;">
-        <div class="container py-5 h-100">
-            <div class="row d-flex justify-content-center align-items-center h-100">
-                <div class="col">
-                    <div class="card">
-                        <div class="card-body p-4">
-                            <div class="row">
-                                <div class="col-lg-7">
-                                    <h5 class="mb-3">
-                                        <a href="index.html" class="text-body">
-                                            <i class="fas fa-long-arrow-alt-left me-2"></i>Continue shopping
-                                        </a>
-                                    </h5>
-                                    <hr>
-                                    <div class="d-flex justify-content-between align-items-center mb-4">
-                                     
-                                        <!-- Cart items will be inserted here by JavaScript -->
-                                        <div class="row" id="ShopingCart"></div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-5">
-                                    <div class="card bg-success text-white rounded-3">
-                                        <div class="card-body">
-                                            <div class="d-flex justify-content-between align-items-center mb-4">
-                                                <h5 class="mb-0">Card details</h5>
-                                            </div>
-                                            <hr class="my-4">
-                                            <div class="d-flex justify-content-between" id="count"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+    <section class="h-100 h-custom" style="background-color: #eee">
+      <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+          <div class="col">
+            <div class="card">
+              <div class="card-body p-4">
+                <div class="row">
+                  <div class="col-lg-7">
+                    <h5 class="mb-3">
+                      <a href="index.html" class="text-body">
+                        <i class="fas fa-long-arrow-alt-left me-2"></i>Continue
+                        shopping
+                      </a>
+                    </h5>
+                    <hr />
+                    <div
+                      class="d-flex justify-content-between align-items-center mb-4"
+                    >
+                      <!-- Cart items will be inserted here by JavaScript -->
+                      <div class="row" id="ShopingCart"></div>
                     </div>
+                  </div>
+                  <div class="col-lg-5">
+                    <div class="card bg-success text-white rounded-3">
+                      <div class="card-body">
+                        <div
+                          class="d-flex justify-content-between align-items-center mb-4"
+                        >
+                          <h5 class="mb-0">Card details</h5>
+                        </div>
+                        <hr class="my-4" />
+                        <div
+                          class="d-flex justify-content-between"
+                          id="count"
+                        ></div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
     </section>
-    
-       
-      
-    </div>
 
     <script src="scriptCart.js"></script>
   </body>

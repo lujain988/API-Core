@@ -97,27 +97,36 @@ namespace WebApplication13.Controllers
         public IActionResult Increment([FromBody] cartitemRequestDTO2 cart, int id)
         {
             var item = _Db.CartItems.Find(id);
-           
-           item.Quantity += cart.Quantity;
-            _Db.CartItems.Update(item);
+
+            if (item.Quantity > 1)
+            {
+
+                item.Quantity += cart.Quantity;
+                _Db.CartItems.Update(item);
+            }
+            else
+            {
+
+                _Db.CartItems.Remove(item);
+            }
             _Db.SaveChanges();
             return Ok(item.Quantity);
         }
 
-        [HttpPut("/decrement/{id}")]
-        public IActionResult Decrement([FromBody] cartitemRequestDTO2 cart, int id)
-        {
-            var item = _Db.CartItems.Find(id);
-            if (item.Quantity > 0)
-            {
+        //[HttpPut("/decrement/{id}")]
+        //public IActionResult Decrement([FromBody] cartitemRequestDTO2 cart, int id)
+        //{
+        //    var item = _Db.CartItems.Find(id);
+        //    if (item.Quantity > 0)
+        //    {
 
-                item.Quantity +=cart.Quantity;
-                _Db.CartItems.Update(item);
-                _Db.SaveChanges();
-            }
-            return Ok(item.Quantity);
+        //        item.Quantity +=cart.Quantity;
+        //        _Db.CartItems.Update(item);
+        //        _Db.SaveChanges();
+        //    }
+        //    return Ok(item.Quantity);
 
-        }
+        //}
 
     }
 }

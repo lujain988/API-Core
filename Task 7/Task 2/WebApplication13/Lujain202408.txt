@@ -4231,3 +4231,16 @@ INNER JOIN [Products] AS [p] ON [c].[ProductID] = [p].[ID]
 2024-08-29 16:35:37.926 +03:00 [INF] Executed action WebApplication13.Controllers.cartItemController.getItem (WebApplication13) in 5.9495ms
 2024-08-29 16:35:37.927 +03:00 [INF] Executed endpoint 'WebApplication13.Controllers.cartItemController.getItem (WebApplication13)'
 2024-08-29 16:35:37.928 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5286/api/cartItem - 200 null application/json; charset=utf-8 14.4645ms
+2024-08-30 12:53:39.144 +03:00 [WRN] The WebRootPath was not found: C:\Users\Orange\Desktop\API-Core\Task 7\Task 2\WebApplication13\wwwroot. Static files may be unavailable.
+2024-08-30 12:53:39.243 +03:00 [INF] Now listening on: http://localhost:5286
+2024-08-30 12:53:39.245 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-08-30 12:53:39.245 +03:00 [INF] Hosting environment: Development
+2024-08-30 12:53:39.246 +03:00 [INF] Content root path: C:\Users\Orange\Desktop\API-Core\Task 7\Task 2\WebApplication13
+2024-08-30 12:53:40.020 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5286/swagger/index.html - null null
+2024-08-30 12:53:40.350 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5286/swagger/index.html - 200 null text/html;charset=utf-8 336.9554ms
+2024-08-30 12:53:40.372 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5286/_framework/aspnetcore-browser-refresh.js - null null
+2024-08-30 12:53:40.378 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5286/_framework/aspnetcore-browser-refresh.js - 200 13768 application/javascript; charset=utf-8 5.7926ms
+2024-08-30 12:53:40.390 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5286/_vs/browserLink - null null
+2024-08-30 12:53:40.434 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5286/_vs/browserLink - 200 null text/javascript; charset=UTF-8 44.2615ms
+2024-08-30 12:53:40.484 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5286/swagger/v1/swagger.json - null null
+2024-08-30 12:53:40.592 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5286/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 108.4562ms
