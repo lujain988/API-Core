@@ -19,6 +19,11 @@ CREATE TABLE Users (
     [Password] nvarchar(MAX),
     Email nvarchar(MAX)
 );
+Alter table Users
+Add PasswordSalt  nvarchar(MAX);
+ALTER TABLE [Users]
+DROP COLUMN PasswordHash,
+DROP COLUMN PasswordSalt;
 CREATE TABLE Orders (
     ID int PRIMARY KEY IDENTITY,
     UserID int REFERENCES Users(ID),
