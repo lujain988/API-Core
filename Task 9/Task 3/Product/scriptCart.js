@@ -1,6 +1,15 @@
 async function getCartItem() {
-  let url = "http://localhost:5286/api/cartItem";
-  let request = await fetch(url);
+  const cartId = localStorage.getItem('cartId');
+  const token = localStorage.getItem('jwtToken');
+  let url = `http://localhost:5286/api/cartItem?cartId=${cartId}`;
+
+
+  let request = await fetch(url,{
+    
+      headers: {
+        'Authorization': `Bearer ${token}`
+    },
+    });
   let data = await request.json();
   let cards = document.getElementById("ShopingCart");
 

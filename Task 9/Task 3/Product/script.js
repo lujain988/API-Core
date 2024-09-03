@@ -2,13 +2,19 @@
 
 async function getAllProduct() {
   const n = localStorage.getItem("categories");
+  const token = localStorage.getItem('jwtToken');
+
   var url;
   if (n) {
-    url = `http://localhost:5286/Products/${n}`;
+    url = `http://localhost:5286/Products${n}`;
   } else {
     url = "http://localhost:5286/Products";
   }
-  let request = await fetch(url);
+  let request = await fetch(url, {
+    headers: {
+      'Authorization': `Bearer ${token}`
+  },
+  });
 
   let data = await request.json();
   let cards = document.getElementById("productCard");

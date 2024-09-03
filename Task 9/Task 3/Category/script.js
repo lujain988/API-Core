@@ -1,6 +1,11 @@
 async function getAllCategory() {
   let url = "http://localhost:5286/api/Categories";
-  let request = await fetch(url);
+  const token = localStorage.getItem('jwtToken');
+  let request = await fetch(url,{
+    headers: {
+      'Authorization': `Bearer ${token}`
+  },
+  });
 
   let data = await request.json();
   let cards = document.getElementById("conteainer"); // Fixed typo here

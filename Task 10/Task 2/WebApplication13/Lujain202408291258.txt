@@ -1,0 +1,13 @@
+2024-08-29 12:58:08.085 +03:00 [WRN] The WebRootPath was not found: C:\Users\Orange\Desktop\Task 3\Task 2\WebApplication13\wwwroot. Static files may be unavailable.
+2024-08-29 12:58:08.206 +03:00 [INF] Now listening on: http://localhost:5286
+2024-08-29 12:58:08.210 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-08-29 12:58:08.211 +03:00 [INF] Hosting environment: Development
+2024-08-29 12:58:08.212 +03:00 [INF] Content root path: C:\Users\Orange\Desktop\Task 3\Task 2\WebApplication13
+2024-08-29 12:58:08.845 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5286/swagger/index.html - null null
+2024-08-29 12:58:09.093 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5286/swagger/index.html - 200 null text/html;charset=utf-8 255.0137ms
+2024-08-29 12:58:09.110 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5286/_framework/aspnetcore-browser-refresh.js - null null
+2024-08-29 12:58:09.110 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5286/_vs/browserLink - null null
+2024-08-29 12:58:09.114 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5286/_framework/aspnetcore-browser-refresh.js - 200 13768 application/javascript; charset=utf-8 4.7608ms
+2024-08-29 12:58:09.152 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5286/_vs/browserLink - 200 null text/javascript; charset=UTF-8 41.9694ms
+2024-08-29 12:58:09.223 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5286/swagger/v1/swagger.json - null null
+2024-08-29 12:58:09.445 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5286/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 222.1903ms
